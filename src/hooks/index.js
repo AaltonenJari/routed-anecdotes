@@ -11,6 +11,14 @@ export const useField = (type) => {
     type,
     value,
     onChange,
-    reset: () => setValue('')
   }
 }
+
+export const useReset = (fields) => {
+  const reset = () => {
+    fields.forEach(field => field.onChange({ target: { value: '' } }))
+  }
+
+  return reset
+}
+

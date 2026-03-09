@@ -3,7 +3,7 @@ import {
   Routes, Route, Link,
   useMatch, Navigate
 } from 'react-router-dom'
-import  { useField } from './hooks'
+import  { useField, useReset } from './hooks'
 
 const Menu = () => {
   const padding = {
@@ -66,6 +66,7 @@ const CreateNew = (props) => {
   const content = useField('text')
   const author = useField('text')
   const info = useField('text')
+  const resetFields = useReset([content, author, info])
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -75,11 +76,6 @@ const CreateNew = (props) => {
       info: info.value,
       votes: 0
     })
-  }
-  const resetFields = () => {
-    content.reset()
-    author.reset()
-    info.reset()
   }
 
   return (
