@@ -14,9 +14,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "server": "json-server --port 3001 db.json",
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
