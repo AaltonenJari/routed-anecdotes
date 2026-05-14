@@ -14,5 +14,6 @@
       "votes": 0,
       "id": "2"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

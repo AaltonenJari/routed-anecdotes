@@ -1,14 +1,17 @@
 import { useField, useReset } from '../hooks'
+import { useAnecdotes } from '../hooks'
 
-const CreateNew = (props) => {
+const CreateNew = () => {
   const content = useField('text')
   const author = useField('text')
   const info = useField('text')
   const resetFields = useReset([content, author, info])
 
+  const { addAnecdote } = useAnecdotes()
+
   const handleSubmit = (e) => {
     e.preventDefault()
-    props.addAnecdote({
+    addAnecdote({
       content: content.value,
       author: author.value,
       info: info.value,
