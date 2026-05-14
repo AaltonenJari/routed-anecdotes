@@ -6,12 +6,10 @@ import AnecdoteList from './components/AnecdoteList'
 import CreateNew from './components/CreateNew'
 import Footer from './components/Footer'
 import Menu from './components/Menu'
-import { useAnecdotes } from './hooks'
+import { useAnecdotes, addAnecdote } from './hooks'
 
 const App = () => {
-  const { anecdotes } = useAnecdotes()
-  
-  const addAnecdote = () => {} // a dummy function to keep code from breaking
+  const { anecdotes, addAnecdote } = useAnecdotes()
 
   return (
     <div>

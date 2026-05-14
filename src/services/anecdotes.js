@@ -10,7 +10,7 @@ const getAll = async () => {
   return await response.json()
 }
 
-const createNew = async (object) => {
+const create = async (object) => {
   const response = await fetch(baseUrl, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -24,6 +24,6 @@ const createNew = async (object) => {
   return await response.json()
 }
 
-const anecdotes = { getAll, createNew }
+const anecdotes = { getAll, create }
 
 export default anecdotes

@@ -8,7 +8,7 @@ const CreateNew = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    props.addNew({
+    props.addAnecdote({
       content: content.value,
       author: author.value,
       info: info.value,
